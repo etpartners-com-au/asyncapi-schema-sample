@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+
+enum command {
+     on =1;
+     off=0;
+}
+
+//description: Light intensity measured in lumens.
+message lightMeasuredPayload {
+  optional int32 lumens;
+  //Date and time when the message was sent.
+  string sentAt ;
+}
+
+
+
+message turnOnOffPayload {
+  //description: Whether to turn on or off the light.
+  enum command;
+  //Date and time when the message was sent.
+  // TODO sendAt has specific date-time format requirement
+  string sentAt ;
+}
+
+
+message dimLightPayload {
+  //Percentage to which the light should be dimmed to.
+  // TODO: the percentage has min value of 0 and max 100
+  optional int32 percentage;
+  //Date and time when the message was sent.
+  string sentAt ;
+}
+
+
+

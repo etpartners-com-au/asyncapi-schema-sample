@@ -1,2 +1,2 @@
-# asyncapi-schema-sample
-asyncapi-schema-sample ; using protobuf as object definition schema
+# protobuff-schema
+sample of protobuff schema and interfaces
